@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050611">
+  <title>Event Horizon — True 3D Black Hole</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="space"></canvas>
+  <div class="vignette"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">◉</span><div><b>EVENT HORIZON</b><small>GRAVITY LAB · 02</small></div></div>
+    <div class="live"><i></i> 3D SIMULATION LIVE</div>
+  </header>
+  <main class="layout">
+    <section class="intro">
+      <div class="eyebrow">DEEP SPACE RESEARCH / WEBGL EXPERIENCE</div>
+      <h1>BLACK<br><em>HOLE</em></h1>
+      <p class="subtitle">A window into the edge of forever.</p>
+      <p class="description">A real-time 3D scene. Orbit the camera, watch matter spiral around the event horizon, and adjust the gravitational field.</p>
+      <div class="stats">
+        <div><small>OBJECT CLASS</small><strong>STELLAR</strong></div>
+        <div><small>DISK TEMP.</small><strong>6.2M K</strong></div>
+        <div><small>PARTICLES</small><strong id="particleCount">4,000</strong></div>
+      </div>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><div><span class="eyebrow">CONTROL DECK</span><h2>Simulation</h2></div><span class="status">● ACTIVE</span></div>
+      <div class="control"><div class="label-row"><label for="gravity">Gravitational pull</label><output id="gravityValue">1.0×</output></div><input id="gravity" type="range" min="0.4" max="2.4" step="0.1" value="1"></div>
+      <div class="control"><div class="label-row"><label for="speed">Disk rotation</label><output id="speedValue">1.0×</output></div><input id="speed" type="range" min="0" max="3" step="0.1" value="1"></div>
+      <div class="control"><div class="label-row"><label for="brightness">Disk intensity</label><output id="brightnessValue">75%</output></div><input id="brightness" type="range" min="20" max="140" step="5" value="75"></div>
+      <div class="actions"><button id="pauseBtn" class="primary">Ⅱ &nbsp; PAUSE</button><button id="resetBtn" class="secondary">↺ &nbsp; RESET</button></div>
+      <div class="hint"><span>✦</span> DRAG TO ORBIT · SCROLL TO ZOOM</div>
+      <p id="error" style="display:none;color:#ff9b9b;font:10px monospace;line-height:1.5;margin-top:12px">3D engine could not load. Check your internet connection and reload.</p>
+    </section>
+  </main>
+  <footer><span>REAL-TIME WEBGL / THREE.JS</span><span>DRAG · ZOOM · EXPLORE</span></footer>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
